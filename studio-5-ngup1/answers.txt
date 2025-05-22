@@ -1,0 +1,31 @@
+1. Nilesh Gupta
+
+2. -The Process ID is: 13082
+   -The Process ID is: 13091
+   -The Process ID is: 13101
+
+3. Parent Process: PID is 13168, and child's PID is 13169
+   Child Process: PID is 13169
+
+4. On success, the PID of the child process is returned in the parent, and 0 is returned in the child. On failure, -1 is returned in the parent,
+no child process is created, and errno is set appropriately.
+
+5. Parent Process:     PID is 13481, and child's PID is 13482
+Child Process: PID is 13482
+
+6. Child Process PID is 13560
+Parent Process PID is 13558, and my child's PID is 13560
+Child process has finished.
+
+The program waited 3 seconds for the parent process to finish and then competed the child process, which is what I expected.
+
+7. The parent process waits for the child process to finish before proceeding, and only exits once it finishes. 
+
+8. 
+total 96
+-rw-r--r--@ 1 nileshgupta  staff   6259 Mar  3 21:42 README.md
+-rw-r--r--@ 1 nileshgupta  staff      0 Mar  3 21:42 answers.txt
+-rwxr-xr-x@ 1 nileshgupta  staff  33832 Mar  3 22:30 fork
+-rw-r--r--@ 1 nileshgupta  staff    695 Mar  3 22:30 fork.c
+Parent Process PID is 13701, and my child's PID is 13702
+Parent Process: Child process has finished.
