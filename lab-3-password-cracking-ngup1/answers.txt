@@ -1,0 +1,62 @@
+brew install libxcrypt
+
+1. Nilesh Gupta
+
+2. pass
+
+3. ferry
+
+4. 22.84 seconds
+
+5. 
+1 thread 24s
+2 thread 12.5s
+4 threads 6.4s
+8 threads 3.32s
+13 threads 2.2s
+26 threads 1.2s 
+
+6. 2 threads = 988,53 hash
+4 threads = 1,930,722 hash count
+8 threads = 3,743,524 hash count
+13 threads = 5,616,650 hash count
+26 threads = 10,297,191 hash count 
+
+7. The program speed just about doubles when threads are doubled up to around 8 thread and gains diminish past the number of physical cores. 
+The program I wrote is faily well balanced becuase it assigns first characters in a round-robin format per thread. 
+
+8. 10.3 million hashes/second using 26 threads 
+
+9. 26 + 26^2 + 26^3 + 26^4 + 26^5 + 26^6 + 26^7 + 26^8 = 217,180,147,158
+
+10. Time for keysize 1-8: <0.001, <0.001, <0.002, 0.046, 1.20, 31.2, 811.3, 21,096.3
+
+hashes for keysize 1-8: 26, 702, 18,278, 475,254, 12,356,630, 321,272,406, 8,353,082,582, 217,180,147,158
+
+it seems key length increases the total hash space exponentially. Every added character multiplies by 26.
+
+11. Lower + Upper= char size 52, 19,770,609,664 total combinations,  1920 sec at max rate
+
+Lower + Upper + Digits	= char size 62, 56,800,235,584 total combinations, 5515 sec at max rate 
+
+Lower + Upper + Digits + Symbols= char size 93, 646,990,183,449 total combinations, 62,848 sec at max rate 
+
+12. none 
+
+13. I did optional exercises 1 and 2 
+
+optional 1: 
+abA.g8pU2Iffo = afoot
+cdfnIXMyMCpPg = chews
+efgC/gw8PDKhs = egret
+ghLneTdBMxJP. = glows
+ijSsXTgIC7QRU = inlay
+klr7dT7cAODsk = knead
+mn4iWfK0m76t6 = motel
+opjPsgpXaahxM = otter
+qr6ncfvfqecME = queen
+
+optional 2: 
+Salts prevent the use of already computer hash tables. Even if two users have the same password, different salts 
+result in different hashes, making cracking slower and more user-specific. Salts add a little randomness without being secret.
+
