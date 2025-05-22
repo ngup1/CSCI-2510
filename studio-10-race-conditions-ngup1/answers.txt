@@ -1,0 +1,65 @@
+1. Nilesh Gupta
+
+2. 
+void *adder(void *arg) {
+    for (int i = 0; i < 2000000; i++) {
+        race++;
+    }
+    return NULL;
+}
+
+void *subtractor(void *arg) {
+    for (int i = 0; i < 2000000; i++) {
+        race--;
+    }
+    return NULL;
+}
+
+3. The final value of the race becomes 0 
+
+4. If adder and subtractor are executed simultaneously 
+by two different threads, the final value of race could be 
+unpredictable due to race conditions. Each thread may interfere 
+with the other's operations leading to a non-zero final value.
+
+5. Final value of race (concurrent): 985548
+Final value of race (concurrent): 572616
+Final value of race (concurrent): -110747
+Final value of race (concurrent): -466875
+Final value of race (concurrent): -433513
+
+6. The results you observed are due to a race condition where two 
+threads concurrently modify a shared variable without synchronization, 
+causing operations to act unpredictably. The race variable could reach 
+a maximum of +2,000,000 or a minimum of -2,000,000 if one thread completes 
+all its operations before the other starts, but this is unlikely without 
+controlling thread execution. The final value of race varies significantly 
+with each run. 
+
+7. After changing iterations to 500,000, the same irradic behavior of the race
+condition was present. Values were generated between 288,000 and -144,000. 
+But, surprisingly, when narrowing the iterations down to 1000, the race 
+condition value stabalized at 0 even after many executions. 
+
+8. Race conditions can still occur on a single processor core because threads are 
+interleaved at the instruction level, and the OS scheduler can switch between threads.
+
+9. When you run the taskset command, it restricts your multi-threaded program
+to only execute on CPU core 0, which means all threads share the same processor. Despite this 
+limitation, race conditions persist.
+
+10. When you modify your program to perform two hundred million operations per 
+function and run it on a single processor core using taskset, the execution time dramatically 
+increases due to the higher number of operations. Additionally, the final value of the race 
+variable is more drastically away form 0. 
+
+11. The bigger impact of the race condition when performing 200000000 operations 
+per function on a single processor core can be attributed to the higher likelihood of operation 
+alternating and increased contention. As the threads repeatedly increment and decrement the shared 
+race variable without synchronization, the large number of operations provides more opportunities for 
+the threads to effect each other.
+
+
+
+
+
