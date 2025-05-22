@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/nileshgupta/CSCI-2510/studio-7-pipes-and-redirection-ngup1/pipe'
+relocations:     []
+...

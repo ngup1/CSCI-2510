@@ -1,0 +1,46 @@
+1. Nilesh Gupta
+
+2. print.c:
+#include <stdio.h>
+
+int main() {
+    printf("Hello from Program 1!\n");
+    return 0;
+}
+
+input.c:
+#include <stdio.h>
+
+int main() {
+    char input[1024];  
+    while(fgets(input, sizeof(input), stdin) != NULL) {
+        printf("Program 2 got: %s", input);
+    }
+    return 0;
+}
+
+3.  did not return 
+
+4. In the pipe() system call, fd[0] is the read end of the pipe, and fd[1] is the write end.
+
+5. In the dup2() function, the first argument specifies the file descriptor to be duplicated, and the second argument is the file 
+descriptor that will be closed and replaced by a duplicate of the first. Therefore, when dup2() succeeds, the second argument 
+(file descriptor) is the one that gets closed.
+
+6. dup2(fd[1], STDOUT_FILENO); 
+close(fd[0]); 
+close(fd[1]); 
+
+dup2(fd[0], STDIN_FILENO); 
+close(fd[1]); 
+close(fd[0]); 
+
+7. Program 2 got: Hello from Program 1!
+
+8. Program 2 got: Hello from Program 1!
+
+9. 
+
+
+
+
