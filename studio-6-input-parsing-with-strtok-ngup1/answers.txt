@@ -1,0 +1,39 @@
+1. Nilesh Gupta
+
+2. Enter your input: Hello I am eating a mango and doing my CSCI2510 homework right now (I got juice on my laptop)
+Hello I am eating a mango and doing my CSCI2510 homework right now (I got juice on my laptop)
+
+3. On the first call to strtok(), the string to be parsed should be specified in str.  In each subsequent call
+that should parse the same string, str must be NULL.
+
+4. The delimiter should be ' '
+
+5. Enter an input: hello i am
+The first token is: hello
+
+6. Enter an input: I went to San Francisco and had a lot of fun 
+I
+went
+to
+San
+Francisco
+and
+had
+a
+lot
+of
+fun
+
+7.  input[strcspn(input, "\n")] = 0; //find first occurance of newline and set to null
+
+8. leave blank 
+
+9. cmd = strtok(input, " ");
+
+10. Enter input command: ls -l
+README.md	answers.txt	printing	printing.c	printing.dSYM
+
+
+
+
+
