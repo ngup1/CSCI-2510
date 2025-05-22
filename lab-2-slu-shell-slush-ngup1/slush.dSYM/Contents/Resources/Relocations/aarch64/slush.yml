@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/nileshgupta/CSCI-2510/lab-2-slu-shell-slush-ngup1/slush'
+relocations:     []
+...
