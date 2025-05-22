@@ -1,0 +1,54 @@
+1. Nilesh Gupta
+
+2. pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
+
+3. I think synchronizing thread access to the shared variable race using a mutex ensures 
+that the final numeric value is correct and consistent (0). I think this would come at the cost of 
+program execution time though. 
+
+4. The outputs match my hypothesis. The race value is 0 but it takes around 7 seconds to execute.
+Final value of race (concurrent): 0
+Final value of race (concurrent): 0
+Final value of race (concurrent): 0
+Final value of race (concurrent): 0
+
+5. 
+./mutex  4.92s user 4.43s system 154% cpu 6.053 total
+./mutex  4.80s user 4.13s system 152% cpu 5.842 total
+./mutex  4.99s user 4.72s system 157% cpu 6.154 total
+
+average: 6.016 seconds
+
+6. 
+./mutex  5.03s user 4.75s system 157% cpu 6.199 total
+./mutex  4.92s user 4.61s system 156% cpu 6.077 total
+./mutex  4.98s user 4.64s system 157% cpu 6.116 total
+
+average: 6.131 seconds
+
+There wasnt a substantial difference, just a tenth of a second. 
+
+7. 
+./mutex  4.94s user 4.52s system 156% cpu 6.036 total
+./mutex  4.94s user 4.63s system 156% cpu 6.113 total
+./mutex  4.79s user 3.80s system 146% cpu 5.863 total
+
+average: 6.004 seconds
+
+not a super big difference, another tenth. 
+
+8. The results due to fewer context switches and reduced
+contention for the mutex. This setup still ensures data 
+consistency across threads without the extreme performance 
+penalties of high-frequency locking. 
+
+9. Per-iteration locking is ideal for cases where operations 
+within the loop independently require synchronization, like 
+updating unique database records. Per-thread locking fits 
+scenarios where a sequence of operations must be executed without 
+interruption, such as processing financial transactions.
+
+
+
+
+
