@@ -1,0 +1,34 @@
+1. Nilesh Gupta
+
+2. The retunn type is *void or a pointer to a location in memory without specifying what type of data resides at that location.
+The expected argument is a single void pointer. 
+
+3. Hello from the thread
+
+4. 
+struct thread_args {
+    int arg1;
+    char arg2[100];
+    int ret;
+};
+
+5. 
+Thread arg1: 10
+Thread arg2: Message from main
+Returned value: 123
+
+6.
+Thread 1: This is thread 1
+Thread 2: This is thread 2
+Thread 0: This is thread 0
+Thread 4: This is thread 4
+Thread 3: This is thread 3
+Thread 0 returned value: 0
+Thread 1 returned value: 2
+Thread 2 returned value: 4
+Thread 3 returned value: 6
+Thread 4 returned value: 8
+
+7.  the order in which threads execute and produce output can vary from one run to another.
+this could be due to things like resource allocation and a lack of synchronization. 
+
