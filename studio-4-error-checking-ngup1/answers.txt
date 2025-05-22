@@ -1,0 +1,56 @@
+1. Nilesh Gupta 
+
+2. 
+#include <fcntl.h>  
+#include <unistd.h>   
+#include <stdio.h>    
+
+#define BUFFER_SIZE 200
+
+int main(int argc, char *argv[]) {
+    if (argc != 2) {
+        fprintf(stderr, "Usage: %s <file>\n", argv[0]);
+        return 1;
+    }
+
+    int fd = open(argv[1], O_RDONLY);
+    if (fd == -1) {
+        perror("Error opening file");
+        return 1;
+    }
+
+    char buffer[BUFFER_SIZE];
+    int bytesRead;
+
+    while ((bytesRead = read(fd, buffer, BUFFER_SIZE)) > 0) {
+        write(STDOUT_FILENO, buffer, bytesRead);
+    }
+
+    if (bytesRead == -1) {
+        perror("Error reading file");
+    }
+
+    close(fd);
+    return 0;
+}
+
+3. you get an error: Error opening file: No such file or directory
+
+4. you get an error: Error opening file: Permission denied
+
+5. On error, -1 is returned and errno is set to indicate the error.
+
+6. perror("Error opening file");
+
+7. I'm still getting the error: Error opening file: No such file or directory
+
+8. Still getting error: Error opening file: Permission denied
+
+9. open() - On error, -1 is returned and errno is set to indicate the error.
+close() - On error, -1 is returned, and errno is set to indicate the error.
+read() - On error, -1 is returned, and errno is set to indicate the error.
+write() - On error, -1 is returned, and errno is set to indicate the error.
+printf() - If an output error is encountered, a negative value is returned.
+
+10. Error checking simplifies software development by narrowing down points of failure so we can easily fix bugs and test new features. 
+It also ensures that the software bails out at the point of failure, and does not continue to run in an erroneous state. 
