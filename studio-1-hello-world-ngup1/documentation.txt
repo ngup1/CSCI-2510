@@ -1,0 +1,15 @@
+The difference between fprintf() and printf() are that the fprintf() function puts the output on teh named output stream, 
+while printf() puts it on the stadard output stream. Essentially printf() is great for printing directly to the users consol,
+but fprintf() gives you more flexibiility and capability to print to other files or output streams.
+
+When you change the character buffer to be much larger than the actual value of your character buffer, you get some weird behavior 
+from the program. The first thing I noticed was in my output there was a massive series of x00x01x00..etc after my output, which made 
+it hard to use. The buffer really ends up writing whatever adjacent data is in memory beyond the actual buffer.
+
+As a software developer when you're coding and need to decide between using a C library function and an OS system call, it really boils 
+down to what you're trying to achieve. If you want your app to work smoothly across different platforms like making a program that can 
+run on both Windows and Linux you'd typically go for C library functions. These are super handy because they handle a lot of the  
+details for you and make sure your code works everywhere. But, if you’re working on something that needs to be well optimized and perform 
+well, or you need to use specific features of the operating system, then system calls are better.  They give you lots of control 
+with the OS, which is perfect for tasks like managing loads of network connections on a server. 
+

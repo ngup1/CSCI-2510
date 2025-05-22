@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/nileshgupta/CSCI-2510/studio-1-hello-world-ngup1/hello_write'
+relocations:     []
+...
