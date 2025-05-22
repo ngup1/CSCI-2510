@@ -1,0 +1,25 @@
+1. Nilesh Gupta
+
+2. 
+(base) nileshgupta@Nileshs-MacBook-Air studio-12-sockets-ngup1 % ./server
+Server listening on /tmp/test_socket
+New connection established
+Received: Hello hello test test 
+
+3. 
+(base) nileshgupta@Nileshs-MacBook-Air studio-12-sockets-ngup1 % ./server
+Server listening on /tmp/test_socket
+New connection established
+Received: hello
+Received: hope this works 
+Received: bye bye 
+Received: quit
+Server shutting down
+
+4. 
+Received: quit
+Server shutting down
+
+(3 and 4 kind of go hand and hand since i implemented both functionality at the same time.)
+
+
