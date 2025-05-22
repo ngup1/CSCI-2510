@@ -1,0 +1,36 @@
+1. Nilesh Gupta
+
+2. Didnt see any questions on the lab so im assuming im good... but heres the results from test1-test4:
+
+TEST 1:
+
+(base) nileshgupta@Nileshs-MacBook-Air lab-4-deadlock-detection-ngup1 % ./deadlock < test1
+RESOURCE 0 -> PROCESS 0
+RESOURCE 1 -> PROCESS 1
+PROCESS 0 -> RESOURCE 1
+PROCESS 1 -> RESOURCE 0
+(base) nileshgupta@Nileshs-MacBook-Air lab-4-deadlock-detection-ngup1 %
+
+TEST 2: 
+
+(base) nileshgupta@Nileshs-MacBook-Air lab-4-deadlock-detection-ngup1 % ./deadlock < test2
+RESOURCE 0 -> PROCESS 0
+RESOURCE 1 -> PROCESS 2
+RESOURCE 2 -> PROCESS 1
+RESOURCE 3 -> PROCESS 1
+PROCESS 0 -> RESOURCE 2
+PROCESS 1 -> RESOURCE 1
+PROCESS 2 -> RESOURCE 0
+(base) nileshgupta@Nileshs-MacBook-Air lab-4-deadlock-detection-ngup1 %
+
+TEST 3: 
+
+NO deadlock
+
+TEST 4: 
+
+(base) nileshgupta@Nileshs-MacBook-Air lab-4-deadlock-detection-ngup1 % ./deadlock < test4
+RESOURCE 0 -> PROCESS 0
+RESOURCE 1 -> PROCESS 1
+PROCESS 0 -> RESOURCE 1
+PROCESS 1 -> RESOURCE 0
