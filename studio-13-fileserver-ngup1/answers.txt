@@ -1,0 +1,25 @@
+1. Nilesh Gupta
+
+can u read from this file server
+
+2. There wasnt any questions specified on the git repo but heres my output 
+
+(base) nileshgupta@Nileshs-MacBook-Air studio-13-fileserver-ngup1 % ./client  
+Connected to server!
+Enter a filename to retrieve, 'ls' to list files, or 'quit' to exit:
+
+Enter command: ls
+Makefile
+README.md
+answers.txt
+client
+client.c
+server
+server.c
+
+Enter command: answers.txt
+1. Nilesh Gupta
+
+can u read from this file server
+Enter command: quit
+(base) nileshgupta@Nileshs-MacBook-Air studio-13-fileserver-ngup1 % 
