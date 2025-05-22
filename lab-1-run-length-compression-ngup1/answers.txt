@@ -1,0 +1,21 @@
+1. Nilesh Gupta
+
+2. This compression technique works well when you have a data set with repeated patters. For example, ABABABAB can be compressed to 4AB. 
+A case where it does not work well is when there are many non repeating characters, like abcdefg. This would commpress to 1a1b1c1d1e1f1g, 
+which is larger than the original. 
+
+3. The strong bias file will compress the best, because it has a 90% occurance of the number 0. Since it is mostly made up of the same 
+character it will compress nicely. 
+
+The original size of 1mil_strong_bias was 1000000 bytes and the compressed size was 409086, giving it a compression ratio of 2.44.
+The original size of 1mil_weak_bias was 1000000 bytes and the compressed size was 1178892, giving it a compression ratio of 0.85.
+The original size of 1mil_random was 1000000 bytes and the compressed size was 1598830, giving it a compression ratio of 0.63.
+
+4. After running ./rle test4 output 1 0  i got the output 1.07s user 13.82s system 99% cpu 15.013 total. In real time, the program took 
+13.82s to complete. 
+
+5. After changing the compression length to 10, i got the output: 0.00s user 0.02s system 93% cpu 0.026 total, indicating that the program
+took 0.02 seconds to run. I imagine this is because the program had to make fewer iterations since it was looking at larger chunks of data. 
+Although, I am surprised that the runtime went down to 0.02, which seems massively low compared to the original 13.82 seconds.
+
+6. attempted but did not figure out extra credit 1.
