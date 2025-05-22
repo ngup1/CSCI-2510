@@ -1,0 +1,5 @@
+Adding text to new file... I wonder if the old text will remain
+looks like it overwrote the old text... 
+hellooooooooooo using the >> now
+I wonder what will happen 
+Looks like it added without erasing the old stuff! cool!

@@ -1,0 +1,22 @@
+1. When I typed Cat into the command line at first nothing happened, but then once I wrote a few sentences it printed those 
+sentences back out to me. 
+
+2. When I ran the command cat < mars.txt, the entire contents of the mars.txt file was printed in the command line. 
+
+3. When I ran cat < mars.txt > new.txt a new file new.txt was created and filled with the contents of mars.txt. When I ran 
+cat > new.txt and then wrote a few lines, new.txt was filled  with the new lines I added and the old contents disappeared.
+
+4. When I used >> instead of >, the lines I wrote were added to new.txt without deleting the contents already in the file.
+
+5. The header file needed for the read() and write() system calls is #include <unistd.h>
+
+6. The return type for read() in ssize_t which represents a number of bytes read by the call. The return value 0 
+represents the end of a file.  
+
+7. Modifying the bufferSize does not change the correctness of the program, but it does effect the effiicency of the program. For
+example, a buffer size of 1 will have the program do a system call for every single byte, which is highly inefficient. On the other
+hand, having a buffer of say 20,000 will maybe only need one system call, but will need a lot of memory. A happy medium is probably 
+best.
+
+8. The tradeoff between a small and large buffer size is efficiency vs size. A smaller buffer will use less memory but be highly 
+inefficient due to the number of system calls required. A bigger bufffer will need less calls but will utilize more memory. 
